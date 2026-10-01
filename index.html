@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constelación — Mujeres en Arte y Ciencia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><div><div class="k">EXPOSICIÓN DIGITAL INTERACTIVA</div>
+<h1>Mujeres que transformaron la ciencia y el arte</h1>
+<p>Explora sus historias, conoce una obra de referencia y después crea tu propia intervención digital.</p>
+<div class="badge">ODS 5 · IGUALDAD DE GÉNERO</div></div></header>
+
+<main>
+<section><div class="title"><h2>Constelación histórica</h2><p>Selecciona un personaje para descubrir su historia y su obra.</p></div>
+<div class="controls" id="filters"><button class="btn active" data-filter="all">Todas</button><button class="btn" data-filter="arte">Arte</button><button class="btn" data-filter="ciencia">Ciencia</button></div>
+<div class="progress"><div class="pt"><span>Personajes descubiertos</span><span id="count">0 / 12</span></div><div class="track"><div class="fill" id="fill"></div></div></div>
+<div class="timeline" id="timeline"></div></section>
+
+<section><div class="title"><h2>Intervén una obra</h2><p>Al seleccionar una mujer aparece una obra de referencia. Puedes intervenirla con tus propios trazos.</p></div>
+<div class="interactive">
+<div class="panel"><div class="selectedYear" id="selectedYear">SIN SELECCIÓN</div><h2 id="selectedName">Tu constelación</h2><p id="selectedInfo">Selecciona una tarjeta de la línea del tiempo.</p>
+<div class="artwork"><img id="artworkImg" alt="Obra de referencia"><div class="caption" id="artworkCaption">Aquí aparecerá la obra.</div></div>
+<div class="stats"><div class="stat">Trazos: <b id="strokes">0</b></div><div class="stat">Descubiertas: <b id="visited">0</b></div></div>
+<div class="controls"><button class="btn" id="random">Elegir personaje</button><button class="btn" id="clear">Limpiar intervención</button></div></div>
+<div class="panel"><div class="status" id="status">● SELECCIONA UNA OBRA PARA COMENZAR</div><canvas id="canvas"></canvas>
+<div class="brushes"><button class="brush" data-size="4">Fino</button><button class="brush active" data-size="12">Pincel</button><button class="brush" data-size="25">Grande</button></div><div class="help">Dibuja con mouse o con el dedo.</div></div>
+</div></section>
+
+<section><div class="quiz"><h2>¿Arte o ciencia?</h2><p>Identifica el campo y acumula puntos.</p><div class="quizName" id="qname">Pulsa comenzar</div><button class="btn" id="start">Comenzar reto</button><div class="options hidden" id="opts"><button class="option" data-a="arte">Arte</button><button class="option" data-a="ciencia">Ciencia</button></div><div id="result"></div></div></section>
+<section><div class="quote" id="quote">“La igualdad también comienza cuando ampliamos las historias que elegimos recordar.”</div></section>
+</main>
+<footer>Programación para Artistas · HTML + CSS + JavaScript · Agenda 2030 · ODS 5</footer>
+
+<div class="modal" id="modal"><div class="box"><button class="close" id="close">×</button><div id="myear"></div><h2 id="mname"></h2><p id="minfo"></p><p id="mquote"></p><button class="btn" id="draw">Intervenir esta historia ↓</button></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
